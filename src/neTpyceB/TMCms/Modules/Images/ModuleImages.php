@@ -1,11 +1,11 @@
 <?php
-namespace neTpyceB\TMCms\Modules\Rating;
+namespace neTpyceB\TMCms\Modules\Images;
 
 use neTpyceB\TMCms\Modules\IModule;
 
 defined('INC') or exit;
 
-class ModuleRating implements IModule {
+class ModuleImages implements IModule {
 	/** @var $this */
 	private static $instance;
 
