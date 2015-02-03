@@ -14,6 +14,13 @@ class ModuleImages implements IModule {
 		return self::$instance;
 	}
 
-
-
+	/**
+	 * @param string $item_type
+	 * @param int $item_id
+	 * @return string
+	 */
+	public static function getPathForItemImages($item_type, $item_id)
+	{
+		return DIR_PUBLIC_URL . 'images/' . $item_type . 's/' . $item_id . DIRECTORY_SEPARATOR;
+	}
 }
