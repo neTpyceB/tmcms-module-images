@@ -6,6 +6,10 @@ use neTpyceB\TMCms\Modules\IModule;
 defined('INC') or exit;
 
 class ModuleImages implements IModule {
+	public static $tables = [
+		'images' => 'm_images'
+	];
+
 	/** @var $this */
 	private static $instance;
 
