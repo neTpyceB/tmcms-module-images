@@ -38,4 +38,12 @@ class Image extends CommonObject {
 
         return $this;
     }
+
+    /**
+     * @return int
+     */
+    public function getItemId()
+    {
+        return $this->getField('item_id');
+    }
 }
