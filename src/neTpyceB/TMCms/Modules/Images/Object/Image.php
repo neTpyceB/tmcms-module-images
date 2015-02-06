@@ -46,4 +46,10 @@ class Image extends CommonObject {
     {
         return $this->getField('item_id');
     }
+
+    public function deleteObject() {
+        unlink(DIR_BASE . $this->getImage());
+
+        parent::deleteObject();
+    }
 }
