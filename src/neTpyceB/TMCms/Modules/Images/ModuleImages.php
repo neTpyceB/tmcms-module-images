@@ -25,6 +25,6 @@ class ModuleImages implements IModule {
 	 */
 	public static function getPathForItemImages($item_type, $item_id)
 	{
-		return DIR_PUBLIC_URL . 'images/' . $item_type . 's/' . $item_id . DIRECTORY_SEPARATOR;
+		return DIR_PUBLIC_URL . 'images' . DIRECTORY_SEPARATOR . $item_type . DIRECTORY_SEPARATOR . $item_id . DIRECTORY_SEPARATOR;
 	}
 }

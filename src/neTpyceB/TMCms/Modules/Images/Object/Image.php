@@ -48,7 +48,7 @@ class Image extends CommonObject {
     }
 
     public function deleteObject() {
-        unlink(DIR_BASE . $this->getImage());
+        if (file_exists(DIR_BASE . $this->getImage())) unlink(DIR_BASE . $this->getImage());
 
         parent::deleteObject();
     }
