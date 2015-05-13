@@ -6,48 +6,21 @@ use neTpyceB\TMCms\Modules\CommonObject;
 /**
  * Class Image
  * @package neTpyceB\TMCms\Modules\Images\Object
- * @method getImage() string
- * @method setImage(string) string
- * @method setOrder(int) string
+ * @method string getImage()
+ * @method string getItemType()
+ * @method int getItemId()
+ * @method int getOrder()
+ *
+ * @method setImage(string)
+ * @method setItemType(string)
+ * @method setItemId(int)
+ * @method setOrder(int)
  */
 class Image extends CommonObject {
     protected $db_table = 'm_images';
 
-    protected $item_type = '';
-    protected $item_id = 0;
-    protected $order = 0;
-
-    /**
-     * @param string $item_type
-     * @return $this
-     */
-    public function setItemType($item_type)
-    {
-        $this->setField('item_type', $item_type);
-
-        return $this;
-    }
-
-    /**
-     * @param int $id
-     * @return $this
-     */
-    public function setItemId($id)
-    {
-        $this->setField('item_id', $id);
-
-        return $this;
-    }
-
-    /**
-     * @return int
-     */
-    public function getItemId()
-    {
-        return $this->getField('item_id');
-    }
-
     public function deleteObject() {
+        // Remove file itself
         if (file_exists(DIR_BASE . $this->getImage())) unlink(DIR_BASE . $this->getImage());
 
         parent::deleteObject();

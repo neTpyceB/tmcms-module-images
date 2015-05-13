@@ -4,7 +4,6 @@ namespace neTpyceB\TMCms\Modules\Images;
 use neTpyceB\TMCms\Modules\CommonObject;
 use neTpyceB\TMCms\Modules\Images\Object\ImageCollection;
 use neTpyceB\TMCms\Modules\IModule;
-use neTpyceB\TMCms\Strings\Converter;
 
 defined('INC') or exit;
 
