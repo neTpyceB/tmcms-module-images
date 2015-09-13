@@ -1,7 +1,7 @@
 <?php
 namespace neTpyceB\TMCms\Modules\Images;
 
-use neTpyceB\TMCms\Modules\CommonObject;
+use neTpyceB\TMCms\Modules\Entity;
 use neTpyceB\TMCms\Modules\Images\Object\ImageCollection;
 use neTpyceB\TMCms\Modules\IModule;
 
@@ -30,7 +30,7 @@ class ModuleImages implements IModule {
 		return DIR_PUBLIC_URL . 'images' . DIRECTORY_SEPARATOR . $item_type . DIRECTORY_SEPARATOR . $item_id . DIRECTORY_SEPARATOR;
 	}
 
-    public static function getObjectImages(CommonObject $object)
+    public static function getObjectImages(Entity $object)
     {
         $class = strtolower(join('', array_slice(explode('\\', get_class($object)), -1)));
 

@@ -1,7 +1,7 @@
 <?php
 namespace neTpyceB\TMCms\Modules\Images\Object;
 
-use neTpyceB\TMCms\Modules\CommonObject;
+use neTpyceB\TMCms\Modules\Entity;
 
 /**
  * Class Image
@@ -16,7 +16,7 @@ use neTpyceB\TMCms\Modules\CommonObject;
  * @method setItemId(int)
  * @method setOrder(int)
  */
-class Image extends CommonObject {
+class Image extends Entity {
     protected $db_table = 'm_images';
 
     public function deleteObject() {

@@ -1,7 +1,7 @@
 <?php
 namespace neTpyceB\TMCms\Modules\Images\Object;
 
-use neTpyceB\TMCms\Modules\CommonObjectCollection;
+use neTpyceB\TMCms\Modules\EntityRepository;
 
 /**
  * Class ImageCollection
@@ -10,6 +10,6 @@ use neTpyceB\TMCms\Modules\CommonObjectCollection;
  * @method setWhereItemType(string)
  * @method setWhereItemId(int)
  */
-class ImageCollection extends CommonObjectCollection {
+class ImageCollection extends EntityRepository {
     protected $db_table = 'm_images';
 }
