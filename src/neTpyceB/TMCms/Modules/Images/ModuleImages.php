@@ -41,4 +41,16 @@ class ModuleImages implements IModule {
         $image_collection->setOrderByField('order');
         return $image_collection->getAsArrayOfObjects();
     }
+
+    public static function deleteEntityImages(Entity $object)
+    {
+        $class = strtolower(join('', array_slice(explode('\\', get_class($object)), -1)));
+
+        // Get existing images in DB
+        $image_collection = new ImageCollection;
+        $image_collection->setWhereItemType($class);
+        $image_collection->setWhereItemId($object->getId());
+
+		return $image_collection->deleteObjectCollection();
+    }
 }

@@ -7,8 +7,8 @@ use neTpyceB\TMCms\Modules\EntityRepository;
  * Class ImageCollection
  * @package neTpyceB\TMCms\Modules\Images\Object
  *
- * @method setWhereItemType(string)
- * @method setWhereItemId(int)
+ * @method setWhereItemType(string $type)
+ * @method setWhereItemId(int $id)
  */
 class ImageCollection extends EntityRepository {
     protected $db_table = 'm_images';
