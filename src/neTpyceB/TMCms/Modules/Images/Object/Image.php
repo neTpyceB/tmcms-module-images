@@ -11,10 +11,10 @@ use neTpyceB\TMCms\Modules\Entity;
  * @method int getItemId()
  * @method int getOrder()
  *
- * @method setImage(string)
- * @method setItemType(string)
- * @method setItemId(int)
- * @method setOrder(int)
+ * @method setImage(string $image)
+ * @method setItemType(string $type)
+ * @method setItemId(int $id)
+ * @method setOrder(int $order)
  */
 class Image extends Entity {
     protected $db_table = 'm_images';
