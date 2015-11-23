@@ -1,7 +1,7 @@
 <?php
 namespace neTpyceB\TMCms\Modules\Images\Object;
 
-use neTpyceB\TMCms\Modules\Entity;
+use neTpyceB\TMCms\Orm\Entity;
 
 /**
  * Class Image

@@ -1,7 +1,7 @@
 <?php
 namespace neTpyceB\TMCms\Modules\Images\Object;
 
-use neTpyceB\TMCms\Modules\EntityRepository;
+use neTpyceB\TMCms\Orm\EntityRepository;
 
 /**
  * Class ImageCollection

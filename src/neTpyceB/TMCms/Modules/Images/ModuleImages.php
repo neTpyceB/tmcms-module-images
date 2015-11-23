@@ -1,7 +1,7 @@
 <?php
 namespace neTpyceB\TMCms\Modules\Images;
 
-use neTpyceB\TMCms\Modules\Entity;
+use neTpyceB\TMCms\Orm\Entity;
 use neTpyceB\TMCms\Modules\Images\Object\ImageCollection;
 use neTpyceB\TMCms\Modules\IModule;
 
@@ -38,7 +38,7 @@ class ModuleImages implements IModule {
         $image_collection = new ImageCollection;
         $image_collection->setWhereItemType($class);
         $image_collection->setWhereItemId($object->getId());
-        $image_collection->setOrderByField('order');
+        $image_collection->addOrderByField('order');
         return $image_collection->getAsArrayOfObjects();
     }
 
