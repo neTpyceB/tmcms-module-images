@@ -15,7 +15,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "TMCms\\Modules\\Images": "src"
+      "TMCms\\Modules\\Images\\": "src"
     }
   }
 }
