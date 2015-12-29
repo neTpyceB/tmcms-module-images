@@ -1,11 +1,11 @@
 <?php
-namespace neTpyceB\TMCms\Modules\Images\Object;
+namespace TMCms\AdminTMCms\Modules\Images\Object;
 
-use neTpyceB\TMCms\Orm\EntityRepository;
+use TMCms\AdminTMCms\Orm\EntityRepository;
 
 /**
  * Class ImageCollection
- * @package neTpyceB\TMCms\Modules\Images\Object
+ * @package TMCms\AdminTMCms\Modules\Images\Object
  *
  * @method setWhereItemType(string $type)
  * @method setWhereItemId(int $id)

@@ -1,5 +1,5 @@
 <?
-namespace neTpyceB\TMCms\Modules\Images;
+namespace TMCms\AdminTMCms\Modules\Images;
 
 defined('INC') or exit;
 
