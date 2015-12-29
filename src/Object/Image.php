@@ -1,11 +1,11 @@
 <?php
-namespace TMCms\AdminTMCms\Modules\Images\Object;
+namespace TMCms\Modules\Images\Object;
 
-use TMCms\AdminTMCms\Orm\Entity;
+use TMCms\Orm\Entity;
 
 /**
  * Class Image
- * @package TMCms\AdminTMCms\Modules\Images\Object
+ * @package TMCms\Modules\Images\Object
  * @method string getImage()
  * @method string getItemType()
  * @method int getItemId()

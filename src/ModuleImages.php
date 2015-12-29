@@ -1,9 +1,9 @@
 <?php
-namespace TMCms\AdminTMCms\Modules\Images;
+namespace TMCms\Modules\Images;
 
-use TMCms\AdminTMCms\Orm\Entity;
-use TMCms\AdminTMCms\Modules\Images\Object\ImageCollection;
-use TMCms\AdminTMCms\Modules\IModule;
+use TMCms\Orm\Entity;
+use TMCms\Modules\Images\Object\ImageCollection;
+use TMCms\Modules\IModule;
 
 defined('INC') or exit;
 

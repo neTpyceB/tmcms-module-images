@@ -1,5 +1,5 @@
 <?
-namespace TMCms\AdminTMCms\Modules\Images;
+namespace TMCms\Modules\Images;
 
 defined('INC') or exit;
 
