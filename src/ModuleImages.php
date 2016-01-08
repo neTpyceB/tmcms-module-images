@@ -2,7 +2,7 @@
 namespace TMCms\Modules\Images;
 
 use TMCms\Orm\Entity;
-use TMCms\Modules\Images\Entity\ImageCollection;
+use TMCms\Modules\Images\Entity\ImageRepository;
 use TMCms\Modules\IModule;
 
 defined('INC') or exit;
@@ -35,7 +35,7 @@ class ModuleImages implements IModule {
         $class = strtolower(join('', array_slice(explode('\\', get_class($object)), -1)));
 
         // Get existing images in DB
-        $image_collection = new ImageCollection;
+        $image_collection = new ImageRepository;
         $image_collection->setWhereItemType($class);
         $image_collection->setWhereItemId($object->getId());
         $image_collection->addOrderByField('order');
@@ -47,7 +47,7 @@ class ModuleImages implements IModule {
         $class = strtolower(join('', array_slice(explode('\\', get_class($object)), -1)));
 
         // Get existing images in DB
-        $image_collection = new ImageCollection;
+        $image_collection = new ImageRepository;
         $image_collection->setWhereItemType($class);
         $image_collection->setWhereItemId($object->getId());
 
