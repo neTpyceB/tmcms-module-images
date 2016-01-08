@@ -1,11 +1,12 @@
 <?php
-namespace TMCms\Modules\Images\Object;
+
+namespace TMCms\Modules\Images\Entity;
 
 use TMCms\Orm\Entity;
 
 /**
  * Class Image
- * @package TMCms\Modules\Images\Object
+ * @package TMCms\Modules\Images\Entity
  * @method string getImage()
  * @method string getItemType()
  * @method int getItemId()
@@ -16,10 +17,10 @@ use TMCms\Orm\Entity;
  * @method setItemId(int $id)
  * @method setOrder(int $order)
  */
-class Image extends Entity {
-    protected $db_table = 'm_images';
-
-    public function deleteObject() {
+class Image extends Entity
+{
+    public function deleteObject()
+    {
         // Remove file itself
         if (file_exists(DIR_BASE . $this->getImage())) unlink(DIR_BASE . $this->getImage());
 

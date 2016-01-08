@@ -2,7 +2,7 @@
 namespace TMCms\Modules\Images;
 
 use TMCms\Orm\Entity;
-use TMCms\Modules\Images\Object\ImageCollection;
+use TMCms\Modules\Images\Entity\ImageCollection;
 use TMCms\Modules\IModule;
 
 defined('INC') or exit;
