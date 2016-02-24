@@ -1,4 +1,5 @@
-<?
+<?php
+
 namespace TMCms\Modules\Images;
 
 defined('INC') or exit;

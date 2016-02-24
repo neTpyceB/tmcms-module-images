@@ -11,7 +11,7 @@ use TMCms\Orm\EntityRepository;
  * @method setWhereItemType(string $type)
  * @method setWhereItemId(int $id)
  */
-class ImageRepository extends EntityRepository
+class ImageEntityRepository extends EntityRepository
 {
     protected $table_structure = [
         'fields' => [

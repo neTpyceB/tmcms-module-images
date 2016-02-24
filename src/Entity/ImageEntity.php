@@ -17,12 +17,14 @@ use TMCms\Orm\Entity;
  * @method setItemId(int $id)
  * @method setOrder(int $order)
  */
-class Image extends Entity
+class ImageEntity extends Entity
 {
     public function deleteObject()
     {
         // Remove file itself
-        if (file_exists(DIR_BASE . $this->getImage())) unlink(DIR_BASE . $this->getImage());
+        if (file_exists(DIR_BASE . $this->getImage())) {
+            unlink(DIR_BASE . $this->getImage());
+        }
 
         parent::deleteObject();
     }

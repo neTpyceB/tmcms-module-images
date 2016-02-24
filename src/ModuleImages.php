@@ -1,24 +1,20 @@
 <?php
+
 namespace TMCms\Modules\Images;
 
 use TMCms\Orm\Entity;
-use TMCms\Modules\Images\Entity\ImageRepository;
+use TMCms\Modules\Images\Entity\ImageEntityRepository;
 use TMCms\Modules\IModule;
+use TMCms\Traits\singletonInstanceTrait;
 
 defined('INC') or exit;
 
 class ModuleImages implements IModule {
+	use singletonInstanceTrait;
+
 	public static $tables = [
 		'images' => 'm_images'
 	];
-
-	/** @var $this */
-	private static $instance;
-
-	public static function getInstance() {
-		if (!self::$instance) self::$instance = new self;
-		return self::$instance;
-	}
 
 	/**
 	 * @param string $item_type
@@ -35,7 +31,7 @@ class ModuleImages implements IModule {
         $class = strtolower(join('', array_slice(explode('\\', get_class($object)), -1)));
 
         // Get existing images in DB
-        $image_collection = new ImageRepository;
+        $image_collection = new ImageEntityRepository;
         $image_collection->setWhereItemType($class);
         $image_collection->setWhereItemId($object->getId());
         $image_collection->addOrderByField('order');
@@ -47,7 +43,7 @@ class ModuleImages implements IModule {
         $class = strtolower(join('', array_slice(explode('\\', get_class($object)), -1)));
 
         // Get existing images in DB
-        $image_collection = new ImageRepository;
+        $image_collection = new ImageEntityRepository;
         $image_collection->setWhereItemType($class);
         $image_collection->setWhereItemId($object->getId());
 
