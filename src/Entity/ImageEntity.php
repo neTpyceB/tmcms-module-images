@@ -12,10 +12,10 @@ use TMCms\Orm\Entity;
  * @method int getItemId()
  * @method int getOrder()
  *
- * @method setImage(string $image)
- * @method setItemType(string $type)
- * @method setItemId(int $id)
- * @method setOrder(int $order)
+ * @method $this setImage(string $image)
+ * @method $this setItemType(string $type)
+ * @method $this setItemId(int $id)
+ * @method $this setOrder(int $order)
  */
 class ImageEntity extends Entity
 {
