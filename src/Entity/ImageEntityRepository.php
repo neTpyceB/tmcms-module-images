@@ -8,9 +8,9 @@ use TMCms\Orm\EntityRepository;
  * Class ImageRepository
  * @package TMCms\Modules\Images\Entity
  *
- * @method setWhereImage(string $image_path)
- * @method setWhereItemType(string $type)
- * @method setWhereItemId(int $id)
+ * @method ImageEntityRepository setWhereImage(string $image_path)
+ * @method ImageEntityRepository setWhereItemType(string $type)
+ * @method ImageEntityRepository setWhereItemId(int $id)
  */
 class ImageEntityRepository extends EntityRepository
 {
