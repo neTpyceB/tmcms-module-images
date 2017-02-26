@@ -22,7 +22,7 @@ class ImageEntity extends Entity
     public function deleteObject()
     {
         // Remove file itself
-        if (file_exists(DIR_BASE . $this->getImage())) {
+        if ($this->getImage() && file_exists(DIR_BASE . $this->getImage()) && is_file(file_exists(DIR_BASE . $this->getImage()))) {
             unlink(DIR_BASE . $this->getImage());
         }
 
