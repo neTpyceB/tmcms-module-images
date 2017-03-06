@@ -12,6 +12,7 @@ use TMCms\Orm\Entity;
  * @method int getItemId()
  * @method int getOrder()
  *
+ * @method $this setActive(int $flag)
  * @method $this setImage(string $image)
  * @method $this setItemType(string $type)
  * @method $this setItemId(int $id)
