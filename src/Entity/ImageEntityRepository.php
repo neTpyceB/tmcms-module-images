@@ -34,10 +34,5 @@ class ImageEntityRepository extends EntityRepository
                 'type' => 'bool',
             ],
         ],
-        'indexes' => [
-            'item_type' => [
-                'type' => 'key',
-            ],
-        ],
     ];
 }
