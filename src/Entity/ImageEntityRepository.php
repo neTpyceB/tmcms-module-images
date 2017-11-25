@@ -51,7 +51,7 @@ class ImageEntityRepository extends EntityRepository
         // If EntityRepository - get string value from it
         if (is_a($type, EntityRepository::class)) {
             /** @var Entity $type */
-            $type = str_replace(EntityRepository::CLASS_RELATION_NAME, '', $type->getUnqualifiedShortClassName());
+            $type = str_replace(self::CLASS_RELATION_NAME_REPOSITORY, '', $type->getUnqualifiedShortClassName());
         }
 
         $this->addSimpleWhereField(self::FIELD_ITEM_TYPE, $type);
