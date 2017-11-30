@@ -41,6 +41,7 @@ class ImageEntityRepository extends EntityRepository
 
     /**
      * @param string|Entity|EntityRepository $type
+     * @return $this
      */
     public function setWhereItemType($type) {
         // If Entity or EntityRepository - get string value from it
@@ -55,5 +56,6 @@ class ImageEntityRepository extends EntityRepository
         }
 
         $this->addSimpleWhereField(self::FIELD_ITEM_TYPE, $type);
+        return $this;
     }
 }
