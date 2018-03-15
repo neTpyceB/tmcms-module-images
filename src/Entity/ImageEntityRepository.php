@@ -13,7 +13,7 @@ use TMCms\Orm\TableStructure;
  *
  * @method $this setWhereActive(int|string $flag)
  * @method $this setWhereImage(string $image_path)
- * @method $this setWhereItemId(string $id)
+ * @method $this setWhereItemId(int $id)
  */
 class ImageEntityRepository extends EntityRepository
 {
@@ -44,10 +44,10 @@ class ImageEntityRepository extends EntityRepository
      * @return $this
      */
     public function setWhereItemType($type) {
-        // If Entity or EntityRepository - get string value from it
+        // If Entity - get string value from it
         if (is_a($type, Entity::class)) {
             /** @var Entity $type */
-            $type = $type->getUnqualifiedShortClassName();
+            $type = strtolower($type->getUnqualifiedShortClassName());
         }
         // If EntityRepository - get string value from it
         if (is_a($type, EntityRepository::class)) {
